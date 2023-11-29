@@ -13,6 +13,14 @@ export type roomType =
   | "办公室"
   | "游戏室";
 
+export type lanType =
+  | "中文简体"
+  | "English"
+  | "日本語"
+  | "Français"
+  | "Deutsch"
+  | "한국어";
+
 export const themes: themeType[] = [
   "现代风格",
   "极简风格",
@@ -27,4 +35,13 @@ export const rooms: roomType[] = [
   "卧室",
   "浴室",
   "游戏室",
+];
+
+export  const lans: lanType[] =[
+  "中文简体",
+  "English",
+  "日本語",
+  "Français",
+  "Deutsch",
+  "한국어"
 ];

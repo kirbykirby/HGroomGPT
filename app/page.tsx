@@ -3,6 +3,7 @@ import Link from "next/link";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import SquigglyLines from "../components/SquigglyLines";
+import { Analytics } from '@vercel/analytics/react';
 
 export default function HomePage() {
   return (
@@ -19,11 +20,11 @@ export default function HomePage() {
           <span className="text-blue-600">Vercel</span>
         </a> */}
         <h1 className="mx-auto max-w-4xl font-display text-5xl font-bold tracking-normal text-gray-300 sm:text-7xl">
-         用AI生成{" "}
+        用AI生成{" "}
           <span className="relative whitespace-nowrap text-blue-600">
             <SquigglyLines />
-            <span className="relative">你梦想中</span>
-          </span>{" "}
+            <span className="relative">你梦想中{" "}</span>
+          </span>
           的房间
         </h1>
         <h2 className="mx-auto mt-12 max-w-xl text-lg sm:text-gray-400  text-gray-500 leading-7">
@@ -63,6 +64,7 @@ export default function HomePage() {
         </div>
       </main>
       <Footer />
+      <Analytics/>
     </div>
   );
 }
