@@ -19,7 +19,7 @@ export default function HomePage() {
           <span className="text-blue-600">Vercel</span>
         </a>
         <h1 className="mx-auto max-w-4xl font-display text-5xl font-bold tracking-normal text-gray-300 sm:text-7xl">
-         用AI生成{" "}
+         11用AI生成{" "}
           <span className="relative whitespace-nowrap text-blue-600">
             <SquigglyLines />
             <span className="relative">你梦想中</span>
