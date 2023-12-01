@@ -158,7 +158,7 @@ export default function DreamPage() {
                         alt="1 icon"
                       />
                       <p className="text-left font-medium">
-                      上传您的房间照片。
+                      上传您的房间照片
                       </p>
                     </div>
                   </div>
