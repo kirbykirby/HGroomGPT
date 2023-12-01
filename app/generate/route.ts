@@ -1,3 +1,4 @@
+
 import { Ratelimit } from "@upstash/ratelimit";
 import redis from "../../utils/redis";
 import { NextResponse } from "next/server";
@@ -17,7 +18,6 @@ export async function POST(request: Request) {
   if (ratelimit) {
     const headersList = headers();
     const ipIdentifier = headersList.get("x-real-ip");
-
     const result = await ratelimit.limit(ipIdentifier ?? "");
 
     if (!result.success) {
@@ -41,7 +41,7 @@ export async function POST(request: Request) {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Authorization: "Token " + process.env.REPLICATE_API_KEY,
+      Authorization: "Token " + 'r8_Nlwj13u19i5JaS0XBrfi39ZDZj3WOIh0L1Z3c',
     },
     body: JSON.stringify({
       version:
@@ -61,6 +61,7 @@ export async function POST(request: Request) {
   });
 
   let jsonStartResponse = await startResponse.json();
+  // console.log(jsonStartResponse);
 
   let endpointUrl = jsonStartResponse.urls.get;
 
@@ -73,7 +74,7 @@ export async function POST(request: Request) {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        Authorization: "Token " + process.env.REPLICATE_API_KEY,
+        Authorization: "Token " + 'r8_Nlwj13u19i5JaS0XBrfi39ZDZj3WOIh0L1Z3c',
       },
     });
     let jsonFinalResponse = await finalResponse.json();
